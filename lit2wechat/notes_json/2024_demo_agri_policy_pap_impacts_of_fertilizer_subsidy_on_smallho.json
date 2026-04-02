@@ -1,0 +1,53 @@
+{
+  "paper_id": "2024_demo_agri_policy_pap_impacts_of_fertilizer_subsidy_on_smallho",
+  "file_name": "demo_agri_policy_paper.pdf",
+  "title": "Impacts of Fertilizer Subsidy on Smallholder Rice Productivity",
+  "year": "2024",
+  "journal": "Journal of Agricultural Policy Studies (2024)",
+  "authors": [
+    "Lina Chen",
+    "David Miller",
+    "Hao Zhang"
+  ],
+  "question": "Abstract: This study examines whether fertilizer subsidy improves rice yield and household income..",
+  "data": "We use a panel dataset from 2018 to 2022 covering 1,240 farm households in three provinces..",
+  "sample": "We use a panel dataset from 2018 to 2022 covering 1,240 farm households in three provinces..",
+  "methods": "Methods: difference-in-differences with household fixed effects and robustness checks..",
+  "findings": "Results show average yield increased by 8.6% and net income increased by 12.4%..",
+  "key_numbers": [
+    "1,240",
+    "8.6",
+    "12.4"
+  ],
+  "limitations": "Limitation: the sample is concentrated in irrigated areas and may not generalize nationwide.",
+  "policy_implications": "Policy implication: targeted subsidy design may improve welfare under budget constraints..",
+  "source_quotes": [
+    {
+      "number": "1,240",
+      "page": 1,
+      "quote_en": "d income. We use a panel dataset from 2018 to 2022 covering 1,240 farm households in three provinces. Methods: difference-in-",
+      "source": "p.1"
+    },
+    {
+      "number": "8.6",
+      "page": 1,
+      "quote_en": "robustness checks. Results show average yield increased by 8.6% and net income increased by 12.4%. Policy implication: tar",
+      "source": "p.1"
+    },
+    {
+      "number": "12.4",
+      "page": 1,
+      "quote_en": "average yield increased by 8.6% and net income increased by 12.4%. Policy implication: targeted subsidy design may improve w",
+      "source": "p.1"
+    }
+  ],
+  "page_refs": [
+    1
+  ],
+  "theme_tags": [
+    "粮食安全",
+    "农业补贴",
+    "农户行为与福利",
+    "土地与生产率"
+  ]
+}
