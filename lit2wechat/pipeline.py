@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -21,13 +20,6 @@ THEME_RULES = {
     "农户行为与福利": ["household", "farmer", "welfare", "income"],
     "土地与生产率": ["land", "productivity", "yield", "efficiency"],
 }
-
-
-@dataclass
-class PaperParseResult:
-    paper_id: str
-    pdf_path: Path
-    pages_text: list[str]
 
 
 def read_pdf_pages(pdf_path: Path) -> list[str]:

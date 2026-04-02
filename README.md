@@ -1,27 +1,34 @@
 # jane-writing
 
-项目已按 `lit2wechat/` 目录组织，用于将英文学术论文加工为中文公众号内容。
+本仓库当前仅保留 `lit2wechat/` 主流程，用于将英文学术论文加工为适合中文公众号发布的内容。
 
-## 当前主目录
+## 仓库结构
 
 ```text
 lit2wechat/
-  papers_raw/         # 原始PDF
-  notes_json/         # 每篇论文的结构化提取结果（先产出）
-  notes_cn/           # 每篇论文的中文摘要（后产出）
-  themes/             # 多篇归纳后的主题与数据
-  drafts/             # 公众号初稿
-  prompts/            # 固定提示词与模板
-  AGENTS.md           # 项目规则（硬性约束）
-  skills/
-    paper_extract/
-      SKILL.md
+  AGENTS.md                 # 硬性规则
+  papers_raw/               # 原始 PDF（输入）
+  notes_json/               # 结构化提取结果（第一产物）
+  notes_cn/                 # 单篇中文摘要（第二产物）
+  themes/                   # 多篇归纳结果
+  drafts/                   # 公众号草稿
+  prompts/                  # 模板与提示词
+  pipeline.py               # 批处理入口：PDF -> JSON + 中文摘要
+  build_overview.py         # 汇总入口：notes_json -> themes/overview_cn.md
 ```
 
-## 工作流（强制）
-1. 从 `papers_raw/` 提取结构化信息到 `notes_json/`。
-2. 仅在 JSON 完整后，生成单篇中文摘要到 `notes_cn/`。
-3. 基于多篇摘要归纳 `themes/`。
-4. 最后生成 `drafts/` 公众号初稿。
+## 流程梳理（执行顺序）
 
-> 禁止跳过 JSON 直接写公众号成稿；所有数字必须附原文出处，缺失时标注“待人工核实”。
+1. 将论文 PDF 放入 `lit2wechat/papers_raw/`。
+2. 执行批处理：`python lit2wechat/pipeline.py --base-dir lit2wechat`
+   - 输出结构化结果到 `notes_json/`
+   - 输出单篇中文摘要到 `notes_cn/`
+3. 执行跨文献归纳：`python lit2wechat/build_overview.py`
+   - 输出 `themes/overview_cn.md`
+4. 在 `themes/` 基础上再写 `drafts/` 公众号草稿。
+
+## 质量约束（摘要）
+
+- 禁止跳过 `notes_json` 直接写公众号成稿。
+- 所有数字必须有出处（页码 + 原句）；缺失则标记“待人工核实”。
+- 必须保留“局限性/争议”并区分“相关”与“因果”。
