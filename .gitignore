@@ -1,0 +1,19 @@
+# lit2wechat 原始文献与流水线输出（保留目录结构）
+lit2wechat/papers_raw/*
+!lit2wechat/papers_raw/.gitkeep
+
+lit2wechat/notes_json/*
+!lit2wechat/notes_json/.gitkeep
+
+lit2wechat/notes_cn/*
+!lit2wechat/notes_cn/.gitkeep
+
+lit2wechat/themes/*
+!lit2wechat/themes/.gitkeep
+
+lit2wechat/drafts/*
+!lit2wechat/drafts/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
