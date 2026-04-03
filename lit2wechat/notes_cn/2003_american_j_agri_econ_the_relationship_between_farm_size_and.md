@@ -1,10 +1,17 @@
 # 2003_american_j_agri_econ_the_relationship_between_farm_size_and 中文要点摘要
 
 ## 基本信息
-- 标题：THE RELATIONSHIP BETWEEN FARM SIZE AND
+- 标题（中文翻译）：待人工翻译
+- 标题（英文原文）：THE RELATIONSHIP BETWEEN FARM SIZE AND
 - 年份：2003
 - 期刊：economics. Using farm-level panel data from 2003 to 2013, we investigate the relationship between
 - 作者：PRODUCTIVITY IN AGRICULTURE: EVIDENCE
+
+## 标题、摘要与结论原文
+- 摘要原文：Using farm-level panel data from 2003 to 2013, we investigate the relationship between.
+- 结论原文：Conclusions.
+- 摘要中文翻译：待人工翻译
+- 结论中文翻译：待人工翻译
 
 ## 研究核心
 - 研究问题：Using farm-level panel data from 2003 to 2013, we investigate the relationship between.

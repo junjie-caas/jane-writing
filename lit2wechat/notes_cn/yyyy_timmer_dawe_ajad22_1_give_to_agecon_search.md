@@ -1,10 +1,17 @@
 # yyyy_timmer_dawe_ajad22_1_give_to_agecon_search 中文要点摘要
 
 ## 基本信息
-- 标题：Give to AgEcon Search
+- 标题（中文翻译）：待人工翻译
+- 标题（英文原文）：Give to AgEcon Search
 - 年份：待人工核实
 - 期刊：The World’s Largest Open Access Agricultural & Applied Economics Digital Library
 - 作者：The World’s Largest Open Access Agricultural & Applied Economics Digital Library
+
+## 标题、摘要与结论原文
+- 摘要原文：ABSTRACT.
+- 结论原文：may no longer define the region’s overall economy, but its significance for the.
+- 摘要中文翻译：待人工翻译
+- 结论中文翻译：待人工翻译
 
 ## 研究核心
 - 研究问题：There is also an esoteric literature on whether.

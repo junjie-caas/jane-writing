@@ -1,10 +1,17 @@
 # 2011_the_size_distributio_university_of_toronto 中文要点摘要
 
 ## 基本信息
-- 标题：University of Toronto
+- 标题（中文翻译）：待人工翻译
+- 标题（英文原文）：University of Toronto
 - 年份：2011
 - 期刊：Department of Economics
 - 作者：Department of Economics
+
+## 标题、摘要与结论原文
+- 摘要原文：Abstract.
+- 结论原文：experiments reach a common conclusion.
+- 摘要中文翻译：待人工翻译
+- 结论中文翻译：待人工翻译
 
 ## 研究核心
 - 研究问题：We investigate why farm size diﬀers across countries and we assess quantitatively the eﬀect of.
