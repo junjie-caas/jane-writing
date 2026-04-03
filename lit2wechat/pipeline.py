@@ -134,6 +134,8 @@ def build_structured_json(pdf_path: Path, pages_text: list[str]) -> dict[str, An
     journal = find_journal(first_page)
     authors = find_authors(first_page, title)
 
+    abstract_en = find_sentence(full_text, [r"abstract", r"this study", r"we examine", r"we investigate", r"whether"])
+    abstract_zh = "待人工翻译"
     question = find_sentence(full_text, [r"research question", r"this study", r"we examine", r"we investigate", r"whether"])
     data = find_sentence(full_text, [r"data", r"dataset", r"panel"])
     sample = find_sentence(full_text, [r"sample", r"observations", r"households", r"farms"])
@@ -141,6 +143,10 @@ def build_structured_json(pdf_path: Path, pages_text: list[str]) -> dict[str, An
     findings = find_sentence(full_text, [r"we find", r"results show", r"our findings", r"increase", r"decrease"])
     limitations = find_sentence(full_text, [r"limitation", r"caution", r"may not", r"future research"])
     policy_implications = find_sentence(full_text, [r"policy implication", r"policy implications", r"recommend", r"government"])
+    conclusion_en = find_sentence(full_text, [r"in conclusion", r"conclusion", r"we conclude", r"overall"])
+    if conclusion_en == "待人工核实" and policy_implications != "待人工核实":
+        conclusion_en = f"{policy_implications}（未检索到Conclusion段标题，暂以政策启示句代替，待人工核实）"
+    conclusion_zh = "待人工翻译"
 
     evidence, page_refs = extract_number_evidence(pages_text)
     key_numbers_raw = extract_numbers_from_text(f"{sample} {findings} {policy_implications}")
@@ -152,9 +158,13 @@ def build_structured_json(pdf_path: Path, pages_text: list[str]) -> dict[str, An
         "paper_id": paper_id,
         "file_name": pdf_path.name,
         "title": title,
+        "title_zh": "待人工翻译",
+        "title_en": title,
         "year": year,
         "journal": journal,
         "authors": authors,
+        "abstract_en": abstract_en,
+        "abstract_zh": abstract_zh,
         "question": question,
         "data": data,
         "sample": sample,
@@ -163,6 +173,8 @@ def build_structured_json(pdf_path: Path, pages_text: list[str]) -> dict[str, An
         "key_numbers": key_numbers,
         "limitations": limitations,
         "policy_implications": policy_implications,
+        "conclusion_en": conclusion_en,
+        "conclusion_zh": conclusion_zh,
         "source_quotes": evidence,
         "page_refs": page_refs if page_refs else ["待人工核实"],
         "theme_tags": detect_theme_tags(full_text),
@@ -187,10 +199,17 @@ def build_chinese_summary(record: dict[str, Any]) -> str:
         f"# {v('paper_id')} 中文要点摘要",
         "",
         "## 基本信息",
-        f"- 标题：{v('title')}",
+        f"- 标题（中文翻译）：{v('title_zh')}",
+        f"- 标题（英文原文）：{v('title_en')}",
         f"- 年份：{v('year')}",
         f"- 期刊：{v('journal')}",
         f"- 作者：{', '.join(v('authors')) if isinstance(v('authors'), list) else v('authors')}",
+        "",
+        "## 标题、摘要与结论原文",
+        f"- 摘要原文：{v('abstract_en')}",
+        f"- 结论原文：{v('conclusion_en')}",
+        f"- 摘要中文翻译：{v('abstract_zh')}",
+        f"- 结论中文翻译：{v('conclusion_zh')}",
         "",
         "## 研究核心",
         f"- 研究问题：{v('question')}",
