@@ -1,10 +1,17 @@
 # 2024_demo_agri_policy_pap_impacts_of_fertilizer_subsidy_on_smallho 中文要点摘要
 
 ## 基本信息
-- 标题：Impacts of Fertilizer Subsidy on Smallholder Rice Productivity
+- 标题（中文翻译）：化肥补贴对小农户水稻生产率的影响
+- 标题（英文原文）：Impacts of Fertilizer Subsidy on Smallholder Rice Productivity
 - 年份：2024
 - 期刊：Journal of Agricultural Policy Studies (2024)
 - 作者：Lina Chen, David Miller, Hao Zhang
+
+## 标题、摘要与结论原文
+- 摘要原文：Abstract: This study examines whether fertilizer subsidy improves rice yield and household income..
+- 结论原文：Policy implication: targeted subsidy design may improve welfare under budget constraints..（未检索到Conclusion段标题，暂以政策启示句代替，待人工核实）
+- 摘要中文翻译：本研究考察化肥补贴是否能够提升水稻单产与农户家庭收入。
+- 结论中文翻译：政策含义是：在预算约束下，定向补贴设计可能提升福利（未检索到 Conclusion 段标题，暂以政策启示句代替，待人工核实）。
 
 ## 研究核心
 - 研究问题：Abstract: This study examines whether fertilizer subsidy improves rice yield and household income..
