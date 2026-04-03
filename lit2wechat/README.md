@@ -36,6 +36,23 @@ python -m pip install -r lit2wechat/requirements.txt
 python lit2wechat/pipeline.py --base-dir lit2wechat
 ```
 
+## 按文件夹批量导出 Excel（新增）
+在仓库根目录执行：
+
+```bash
+python lit2wechat/pdf_batch_to_excel.py --input-dir lit2wechat/papers_raw --output-dir lit2wechat
+```
+
+脚本会基于内置学术词汇表生成中文翻译草案，并输出：
+- `lit2wechat/article_summary.xlsx`：逐篇文章信息表
+- `lit2wechat/category_summary.xlsx`：分类汇总表
+
+若只需抽取英文内容，可禁用翻译：
+
+```bash
+python lit2wechat/pdf_batch_to_excel.py --input-dir lit2wechat/papers_raw --output-dir lit2wechat --disable-translation
+```
+
 ## 演示：用 `papers_raw/` 的一篇示例论文跑通
 1) 生成示例 PDF：
 
