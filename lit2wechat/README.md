@@ -4,6 +4,7 @@
 1. 结构化 JSON（保存到 `notes_json/`）
 2. 中文要点摘要（保存到 `notes_cn/`）
 3. 主题标签（写入 JSON 的 `theme_tags` 字段）
+4. 基于关键词相似性的分组结果（保存到 `themes/keyword_clusters_cn.md` 与 `themes/keyword_clusters.json`）
 
 ## 适用场景
 - 领域：农业经济与政策研究
@@ -13,6 +14,8 @@
 ## 输出字段（每篇论文）
 程序会提取下列字段：
 - `title`, `year`, `journal`, `authors`
+- `title_en`, `title_zh`, `keywords_en`, `keywords_zh`
+- `abstract_en`, `abstract_zh`, `conclusion_en`, `conclusion_zh`
 - `question`, `data`, `sample`, `methods`, `findings`
 - `key_numbers`, `limitations`, `policy_implications`
 - `source_quotes`, `page_refs`, `theme_tags`
@@ -49,6 +52,8 @@ python lit2wechat/pipeline.py --base-dir lit2wechat
 3) 查看输出：
 - `lit2wechat/notes_json/*.json`
 - `lit2wechat/notes_cn/*.md`
+- `lit2wechat/themes/keyword_clusters_cn.md`
+- `lit2wechat/themes/keyword_clusters.json`
 - 解析失败日志：`lit2wechat/notes_json/failed_records.jsonl`
 
 
