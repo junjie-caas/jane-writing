@@ -32,3 +32,25 @@ lit2wechat/
 - 禁止跳过 `notes_json` 直接写公众号成稿。
 - 所有数字必须有出处（页码 + 原句）；缺失则标记“待人工核实”。
 - 必须保留“局限性/争议”并区分“相关”与“因果”。
+
+## 国家粮食和物资储备局收购数据表（新增）
+
+已新增自动整理脚本：
+
+- 脚本：`tools/lswz_scraper.py`
+- 输出：
+  - `data/lswz_purchase_data.csv`
+  - `data/lswz_purchase_data.md`
+- 目标页面：`https://www.lswz.gov.cn/html/zmhd/lysj/lssg-szym.shtml`
+
+本地手动更新命令：
+
+```bash
+python tools/lswz_scraper.py --out-csv data/lswz_purchase_data.csv --out-md data/lswz_purchase_data.md
+```
+
+每周自动更新：
+
+- 已配置 GitHub Actions：`.github/workflows/lswz_weekly_update.yml`
+- 定时规则：每周一 `02:00 UTC` 自动运行
+- 也可在 Actions 页手动触发（`workflow_dispatch`）
